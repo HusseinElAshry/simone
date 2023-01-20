@@ -1,0 +1,297 @@
+$mainColor:#20C997;
+@mixin beforeStore($content)
+{
+    content: $content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    color: rgb(245, 238, 238);
+    font-size: 4.5rem;
+}
+
+nav
+{
+    z-index: 1000;
+}
+h2::after
+{
+    content:"";
+    position: absolute;
+    width: 3rem;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: $mainColor 1px solid;
+}
+#home
+{
+   background: linear-gradient(rgba(#000 , 0.7), rgba(#000 , 0.7)) ,url(../img/intro-bg.jpg); 
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+   color: white;
+   height: 100vh;
+   .fs-1::after
+   {
+        content: "";
+        animation: typing 6s ease-in-out 6ms infinite  ;
+   }
+   button
+   {
+    background: transparent;
+    border: $mainColor solid 2px;
+    color: white;
+    &:hover
+    {
+        background: $mainColor;
+    }
+   }
+   i
+   {
+        bottom: 0%;
+        animation: moving 800ms ease-in-out 1ms infinite alternate ;
+   }
+}
+#about
+{
+    h2 {
+        z-index: 3; 
+        &::before
+        {
+            @include beforeStore("ABOUT ME");
+            z-index: -1;
+        }
+    }
+    table button
+    {
+        background: $mainColor;
+        color: white;
+        border: none;
+    }
+    .container .row:nth-child(3) .col-md-6:nth-child(1) , .col-md-6:nth-child(2) , .col-md-6:nth-child(3) 
+    {
+        border-right: #20C997  dashed 2px;
+    }
+}
+#services
+{
+    h2 {
+        z-index: 3; 
+        &::before
+        {
+            @include beforeStore("SERVICES");
+            z-index: -1;
+        }
+    }
+    .col-3
+    {
+        max-width: fit-content;
+        margin: auto;
+        color: $mainColor;
+    }
+}
+#resume{
+    h2{
+        z-index: 3;
+        &::before
+        {
+            @include beforeStore("SUMMARY");
+            z-index: -1;
+        }
+    }
+    .h5{
+        background: $mainColor;
+        max-width: fit-content;
+    }
+    .progress-bar
+    {
+        background: $mainColor!important;
+    }
+    ul li
+    {
+        font-weight: bold;
+    }
+}
+#portfolio
+{
+    h2{
+        z-index: 3;
+        &::before
+        {
+            @include beforeStore("PORTFOLIO");
+            z-index: -1;
+        }
+    }
+    .drag
+    {
+        top: 100%;
+        left: 5%;
+        background: rgba($color: #000000, $alpha: 0.7);
+        width: 90%;
+        height: 80%;
+        border-radius: 10px;
+        transition: all 1s 10ms ease-in-out;
+    }
+    .controller
+    {
+        &:hover 
+        {
+            .drag
+            {
+                top: 10%;
+            }
+        }
+    }
+    .slider
+    {
+        width: 50%;
+        height: 50%;
+        background-image:url(../img/project-2.jpg);
+        background-position: center center ;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .overLay
+    {
+        z-index: 10;
+    }
+    .fa-x
+    {
+        top: 1rem;
+        right: 1rem;
+    }
+}
+#clients
+{
+    h2{
+        z-index: 3;
+        &::before
+        {
+            @include beforeStore("TESTIMONIAL");
+            z-index: -1;
+        }
+    } 
+    .icon
+    {
+        width: 10px!important;
+        height: 10px!important;
+        padding: 0px;
+        border-radius: 100%!important;
+        background: $mainColor!important;
+
+    }
+}
+#contact
+{
+    h2{
+        z-index: 3;
+        &::before
+        {
+            @include beforeStore("CONTACT");
+            z-index: -1;
+        }
+    }
+    i
+    {
+        color: $mainColor;
+    }
+    button{
+        background-color: $mainColor;
+        border: $mainColor 1px solid;
+        &:hover
+        {
+            background: white;
+        }
+    }
+}
+@keyframes moving
+{
+    0%{
+        bottom: 5%;
+    }
+    50%{
+        bottom: 0%;
+    }
+}
+@keyframes typing
+{
+    0%{content: "";}
+    2.5%{content: "Si";}
+    5%{content: "Simo";}
+    7.5%{content: "Simone";}
+    10%{content: "Simone ";}
+    12.5%{content: "Simone Ol";}
+    15%{content: "Simone Oliv";}
+    17.5%{content: "Simone Olivia.";}
+    22.5%{content: "Simone Oliv";}
+    25%{content: "Simone Ol";}
+    27.5%{content: "Simone ";}
+    30%{content: "Simo";}
+    32.5%{content: "Si";}
+    35%{content: "";}
+    37.5%{content: "a";}
+    40%{content: "a Fr";}
+    42.5%{content: "a Free";}
+    45%{content: "a Freela";}
+    47.5%{content: "a Freelanc";}
+    50%{content: "a Freelancer.";}
+    55%{content: "a Freelanc";}
+    57.5%{content: "a Freela";}
+    60%{content: "a Free";}
+    62.5%{content: "a Fr";}
+    65%{content: "a";}
+    67.5%{content: "a Ph";}
+    70%{content: "a Phot";}
+    72.5%{content: "a Photog";}
+    75%{content: "a Photogra";}
+    77.5%{content: "a Photograph";}
+    82.5%{content: "a photographer.";}
+    87.5%{content: "a Photograph";}
+    90%{content: "a Photogra";}
+    92.5%{content: "a Photog";}
+    95%{content: "a Phot";}
+    97.5%{content: "a Ph";}
+    100%{content: "a";}
+}
+@media screen and (min-width : 768px) and (max-width : 992px ) {
+    #about
+    { 
+        .container .row:nth-child(3) .col-md-6:nth-child(2) ,.col-md-6:nth-child(3) 
+        {
+            border-right: none;
+        }
+
+        .container .row:nth-child(3) .col-md-6:nth-child(1)
+        {
+            border-bottom: $mainColor dashed 2px;
+            border-right: $mainColor dashed 2px;
+        }
+        .container .row:nth-child(3) .col-md-6:nth-child(4)
+        {
+            border-top: $mainColor dashed 2px;
+            border-left: $mainColor dashed 2px;
+        }
+
+    }
+    
+}
+@media screen and (max-width : 768px) {
+    #about
+    { 
+        
+        .container .row:nth-child(3) .col-md-6:nth-child(1),.col-md-6:nth-child(2),.col-md-6:nth-child(3) ,.col-md-6:nth-child(4)
+        {
+            border-right: none;
+            border-left:none ;
+            border-top: none;
+        }
+        .container .row:nth-child(3) .col-md-6
+        {
+            border-bottom: $mainColor dashed 1px;
+        }
+
+    }
+    
+}

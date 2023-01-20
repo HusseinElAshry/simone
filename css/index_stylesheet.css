@@ -1,0 +1,463 @@
+nav {
+  z-index: 1000;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: #20C997 1px solid;
+}
+
+#home {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/intro-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  height: 100vh;
+}
+#home .fs-1::after {
+  content: "";
+  -webkit-animation: typing 6s ease-in-out 6ms infinite;
+          animation: typing 6s ease-in-out 6ms infinite;
+}
+#home button {
+  background: transparent;
+  border: #20C997 solid 2px;
+  color: white;
+}
+#home button:hover {
+  background: #20C997;
+}
+#home i {
+  bottom: 0%;
+  -webkit-animation: moving 800ms ease-in-out 1ms infinite alternate;
+          animation: moving 800ms ease-in-out 1ms infinite alternate;
+}
+
+#about h2 {
+  z-index: 3;
+}
+#about h2::before {
+  content: "ABOUT ME";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(245, 238, 238);
+  font-size: 4.5rem;
+  z-index: -1;
+}
+#about table button {
+  background: #20C997;
+  color: white;
+  border: none;
+}
+#about .container .row:nth-child(3) .col-md-6:nth-child(1), #about .col-md-6:nth-child(2), #about .col-md-6:nth-child(3) {
+  border-right: #20C997 dashed 2px;
+}
+
+#services h2 {
+  z-index: 3;
+}
+#services h2::before {
+  content: "SERVICES";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(245, 238, 238);
+  font-size: 4.5rem;
+  z-index: -1;
+}
+#services .col-3 {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: auto;
+  color: #20C997;
+}
+
+#resume h2 {
+  z-index: 3;
+}
+#resume h2::before {
+  content: "SUMMARY";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(245, 238, 238);
+  font-size: 4.5rem;
+  z-index: -1;
+}
+#resume .h5 {
+  background: #20C997;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+#resume .progress-bar {
+  background: #20C997 !important;
+}
+#resume ul li {
+  font-weight: bold;
+}
+
+#portfolio h2 {
+  z-index: 3;
+}
+#portfolio h2::before {
+  content: "PORTFOLIO";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(245, 238, 238);
+  font-size: 4.5rem;
+  z-index: -1;
+}
+#portfolio .drag {
+  top: 100%;
+  left: 5%;
+  background: rgba(0, 0, 0, 0.7);
+  width: 90%;
+  height: 80%;
+  border-radius: 10px;
+  transition: all 1s 10ms ease-in-out;
+}
+#portfolio .controller:hover .drag {
+  top: 10%;
+}
+#portfolio .slider {
+  width: 50%;
+  height: 50%;
+  background-image: url(../img/project-2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#portfolio .overLay {
+  z-index: 10;
+}
+#portfolio .fa-x {
+  top: 1rem;
+  right: 1rem;
+}
+
+#clients h2 {
+  z-index: 3;
+}
+#clients h2::before {
+  content: "TESTIMONIAL";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(245, 238, 238);
+  font-size: 4.5rem;
+  z-index: -1;
+}
+#clients .icon {
+  width: 10px !important;
+  height: 10px !important;
+  padding: 0px;
+  border-radius: 100% !important;
+  background: #20C997 !important;
+}
+
+#contact h2 {
+  z-index: 3;
+}
+#contact h2::before {
+  content: "CONTACT";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(245, 238, 238);
+  font-size: 4.5rem;
+  z-index: -1;
+}
+#contact i {
+  color: #20C997;
+}
+#contact button {
+  background-color: #20C997;
+  border: #20C997 1px solid;
+}
+#contact button:hover {
+  background: white;
+}
+
+@-webkit-keyframes moving {
+  0% {
+    bottom: 5%;
+  }
+  50% {
+    bottom: 0%;
+  }
+}
+
+@keyframes moving {
+  0% {
+    bottom: 5%;
+  }
+  50% {
+    bottom: 0%;
+  }
+}
+@-webkit-keyframes typing {
+  0% {
+    content: "";
+  }
+  2.5% {
+    content: "Si";
+  }
+  5% {
+    content: "Simo";
+  }
+  7.5% {
+    content: "Simone";
+  }
+  10% {
+    content: "Simone ";
+  }
+  12.5% {
+    content: "Simone Ol";
+  }
+  15% {
+    content: "Simone Oliv";
+  }
+  17.5% {
+    content: "Simone Olivia.";
+  }
+  22.5% {
+    content: "Simone Oliv";
+  }
+  25% {
+    content: "Simone Ol";
+  }
+  27.5% {
+    content: "Simone ";
+  }
+  30% {
+    content: "Simo";
+  }
+  32.5% {
+    content: "Si";
+  }
+  35% {
+    content: "";
+  }
+  37.5% {
+    content: "a";
+  }
+  40% {
+    content: "a Fr";
+  }
+  42.5% {
+    content: "a Free";
+  }
+  45% {
+    content: "a Freela";
+  }
+  47.5% {
+    content: "a Freelanc";
+  }
+  50% {
+    content: "a Freelancer.";
+  }
+  55% {
+    content: "a Freelanc";
+  }
+  57.5% {
+    content: "a Freela";
+  }
+  60% {
+    content: "a Free";
+  }
+  62.5% {
+    content: "a Fr";
+  }
+  65% {
+    content: "a";
+  }
+  67.5% {
+    content: "a Ph";
+  }
+  70% {
+    content: "a Phot";
+  }
+  72.5% {
+    content: "a Photog";
+  }
+  75% {
+    content: "a Photogra";
+  }
+  77.5% {
+    content: "a Photograph";
+  }
+  82.5% {
+    content: "a photographer.";
+  }
+  87.5% {
+    content: "a Photograph";
+  }
+  90% {
+    content: "a Photogra";
+  }
+  92.5% {
+    content: "a Photog";
+  }
+  95% {
+    content: "a Phot";
+  }
+  97.5% {
+    content: "a Ph";
+  }
+  100% {
+    content: "a";
+  }
+}
+@keyframes typing {
+  0% {
+    content: "";
+  }
+  2.5% {
+    content: "Si";
+  }
+  5% {
+    content: "Simo";
+  }
+  7.5% {
+    content: "Simone";
+  }
+  10% {
+    content: "Simone ";
+  }
+  12.5% {
+    content: "Simone Ol";
+  }
+  15% {
+    content: "Simone Oliv";
+  }
+  17.5% {
+    content: "Simone Olivia.";
+  }
+  22.5% {
+    content: "Simone Oliv";
+  }
+  25% {
+    content: "Simone Ol";
+  }
+  27.5% {
+    content: "Simone ";
+  }
+  30% {
+    content: "Simo";
+  }
+  32.5% {
+    content: "Si";
+  }
+  35% {
+    content: "";
+  }
+  37.5% {
+    content: "a";
+  }
+  40% {
+    content: "a Fr";
+  }
+  42.5% {
+    content: "a Free";
+  }
+  45% {
+    content: "a Freela";
+  }
+  47.5% {
+    content: "a Freelanc";
+  }
+  50% {
+    content: "a Freelancer.";
+  }
+  55% {
+    content: "a Freelanc";
+  }
+  57.5% {
+    content: "a Freela";
+  }
+  60% {
+    content: "a Free";
+  }
+  62.5% {
+    content: "a Fr";
+  }
+  65% {
+    content: "a";
+  }
+  67.5% {
+    content: "a Ph";
+  }
+  70% {
+    content: "a Phot";
+  }
+  72.5% {
+    content: "a Photog";
+  }
+  75% {
+    content: "a Photogra";
+  }
+  77.5% {
+    content: "a Photograph";
+  }
+  82.5% {
+    content: "a photographer.";
+  }
+  87.5% {
+    content: "a Photograph";
+  }
+  90% {
+    content: "a Photogra";
+  }
+  92.5% {
+    content: "a Photog";
+  }
+  95% {
+    content: "a Phot";
+  }
+  97.5% {
+    content: "a Ph";
+  }
+  100% {
+    content: "a";
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #about .container .row:nth-child(3) .col-md-6:nth-child(2), #about .col-md-6:nth-child(3) {
+    border-right: none;
+  }
+  #about .container .row:nth-child(3) .col-md-6:nth-child(1) {
+    border-bottom: #20C997 dashed 2px;
+    border-right: #20C997 dashed 2px;
+  }
+  #about .container .row:nth-child(3) .col-md-6:nth-child(4) {
+    border-top: #20C997 dashed 2px;
+    border-left: #20C997 dashed 2px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #about .container .row:nth-child(3) .col-md-6:nth-child(1), #about .col-md-6:nth-child(2), #about .col-md-6:nth-child(3), #about .col-md-6:nth-child(4) {
+    border-right: none;
+    border-left: none;
+    border-top: none;
+  }
+  #about .container .row:nth-child(3) .col-md-6 {
+    border-bottom: #20C997 dashed 1px;
+  }
+}/*# sourceMappingURL=index_stylesheet.css.map */
